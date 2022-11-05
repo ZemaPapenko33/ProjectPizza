@@ -1,0 +1,12 @@
+.root {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 100px;
+}
+.root span {
+  font-size: 64px;
+}
+.root .description {
+  font-size: 22px;
+}/*# sourceMappingURL=NotFoundBlock.module.css.map */

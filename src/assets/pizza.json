@@ -92,11 +92,21 @@
   {
     "id": 9,
     "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/30367198-f3bd-44ed-9314-6f717960da07.jpg",
-    "title": "Овощи и грибы 🌱",
+    "title": "Овощи и грибы",
     "types": [0, 1],
     "sizes": [26, 30, 40],
     "price": 285,
     "category": 5,
     "rating": 7
+  },
+  {
+    "id": 10,
+    "imageUrl": "https://img.freepik.com/free-photo/meat-chicken-and-mushrooms-pizza-isolated-on-white-background-top-view-photo-for-the-menu_639032-224.jpg?w=740&t=st=1667636795~exp=1667637395~hmac=2a027f3388c820838ce2c15950485db7966f390fa8acb6d1b3c47101c8f5efa3",
+    "title": "Пицца с мясом курицы и грибами",
+    "types": [0, 1],
+    "sizes": [26, 30, 40],
+    "price": 39,
+    "category": 1,
+    "rating": 9
   }
 ]
