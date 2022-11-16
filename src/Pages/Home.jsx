@@ -29,20 +29,7 @@ const Home = () => {
   const pizzas = items.map((obj) => <PizzaBlock key={obj.id} {...obj} />);
   const skeletons = [...new Array(10)].map((_, index) => <Skeleton key={index} />);
 
-  React.useEffect(() => {
-    if (window.location.search) {
-      const params = qs.parse(window.location.search.substring(1));
-      const sort = sortList.find((obj) => obj.sortProperty === params.sortProperty);
-      dispatch(
-        setFilters({
-          ...params,
-          sort,
-        }),
-      );
-    }
-  }, []);
-
-  React.useEffect(() => {
+  const fetchPizzas = () => {
     setIsLoading(true);
     const order = sortType.includes('-') ? 'asc' : 'desc';
     const sortBy = sortType.replace('-', '');
@@ -57,6 +44,23 @@ const Home = () => {
         setIsLoading(false);
       });
     window.scrollTo(0, 0);
+  };
+
+  React.useEffect(() => {
+    if (window.location.search) {
+      const params = qs.parse(window.location.search.substring(1));
+      const sort = sortList.find((obj) => obj.sortProperty === params.sortProperty);
+      dispatch(
+        setFilters({
+          ...params,
+          sort,
+        }),
+      );
+    }
+  }, []);
+
+  React.useEffect(() => {
+    fetchPizzas();
   }, [categoryId, sortType, searchValue, currentPage]);
 
   React.useEffect(() => {
